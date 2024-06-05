@@ -1,0 +1,21 @@
+  <%= form_for @product, local: true do |f| %>
+  <div class="form-group mt-4">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group mt-4">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="form-group mt-4">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="form-group mt-4">
+    <%= f.label :images %><br />
+    <%= f.file_field :images, multiple:true %>
+  </div>
+  <%= f.submit "Submit", class: 'btn btn-primary mt-4' %>
+</div>
+<% end %>
